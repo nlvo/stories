@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>99 verhalen</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Alle verhalen</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#"><img src="assets/img/logo.svg" alt="RET logo"></a>
+            </li>
+            <li>
+                <form>
+                    <input type="text" name="search">
+                    <input type="submit" name="search-submit" value="zoek">
+                </form>
+            </li>
+        </ul>
+    </nav>
+
+    <!------------------------ Main ------------------------>
+
+    <main>
+        <header>
+            <h1>99 verhalen</h1>
+            <img src="assets/img/header.png" alt="">
+		</header>
+
+		<!------------------------ Filter form ------------------------>
+        <form>
+            <h2>Filter</h2>
+            <fieldset>
+                <div>
+                    <input type="text" name="search">
+                    <input type="submit" name="search-submit" value="zoek">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Duur</legend>
+                <div>
+                    <input id="korte-verhaal" type="checkbox" value="Korte verhaal">
+                    <label for="korte-verhaal">Korte verhaal</label>
+                </div>
+                <div>
+                    <input id="middelmatig-verhaal" type="checkbox" value="Middelmatig verhaal">
+                    <label for="middelmatig-verhaal">Middelmatig verhaal</label>
+                </div>
+                <div>
+                    <input id="lange-verhaal" type="checkbox" value="Lange verhaal">
+                    <label for="lange-verhaal">Lange verhaal</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Genre</legend>
+                <div>
+                    <input id="liefde" type="checkbox" value="Liefde">
+                    <label for="liefde">Liefde</label>
+                </div>
+                <div>
+                    <input id="gedicht" type="checkbox" value="Gedicht">
+                    <label for="gedicht">Gedicht</label>
+                </div>
+                <div>
+                    <input id="horror" type="checkbox" value="Horror">
+                    <label for="horror">Horror</label>
+                </div>
+                <div>
+                    <input id="vakantie" type="checkbox" value="Vakantie">
+                    <label for="vakantie">Vakantie</label>
+                </div>
+                <div>
+                    <input id="fantasie" type="checkbox" value="Fantasie">
+                    <label for="fantasie">Fantasie</label>
+                </div>
+                <div>
+                    <input id="humor" type="checkbox" value="Humor">
+                    <label for="humor">Humor</label>
+                </div>
+                <div>
+                    <input id="bekende-figuren" type="checkbox" value="Bekende figuren">
+                    <label for="bekende-figuren">Bekende figuren</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Kleur</legend>
+                <div>
+                    <input id="rood" type="checkbox" value="Rood">
+                    <label for="rood">Rood</label>
+                </div>
+                <div>
+                    <input id="oranje" type="checkbox" value="Oranje">
+                    <label for="oranje">Oranje</label>
+                </div>
+                <div>
+                    <input id="geel" type="checkbox" value="Geel">
+                    <label for="geel">Geel</label>
+                </div>
+                <div>
+                    <input id="groen" type="checkbox" value="Groen">
+                    <label for="groen">Groen</label>
+                </div>
+                <div>
+                    <input id="blauw" type="checkbox" value="Blauw">
+                    <label for="blauw">Blauw</label>
+                </div>
+                <div>
+                    <input id="paars" type="checkbox" value="Paars">
+                    <label for="paars">Paars</label>
+                </div>
+                <div>
+                    <input id="roze" type="checkbox" value="Roze">
+                    <label for="roze">Roze</label>
+                </div>
+                <div>
+                    <input id="wit" type="checkbox" value="Wit">
+                    <label for="wit">Wit</label>
+                </div>
+                <div>
+                    <input id="zwart" type="checkbox" value="Zwart">
+                    <label for="zwart">Zwart</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Tags</legend>
+                <div>
+                    <input id="rust" type="checkbox" value="Rust">
+                    <label for="rust">Rust</label>
+                </div>
+                <div>
+                    <input id="druk" type="checkbox" value="Druk">
+                    <label for="druk">Druk</label>
+                </div>
+                <div>
+                    <input id="chaotisch" type="checkbox" value="Chaotisch">
+                    <label for="chaotisch">Chaotisch</label>
+                </div>
+                <div>
+                    <input id="vrolijk" type="checkbox" value="Vrolijk">
+                    <label for="vrolijk">Vrolijk</label>
+                </div>
+                <div>
+                    <input id="agressief" type="checkbox" value="Aggresief">
+                    <label for="agressief">Agressief</label>
+                </div>
+                <div>
+                    <input id="verwarrend" type="checkbox" value="Verwarrend">
+                    <label for="verwarrend">Verwarrend</label>
+                </div>
+                <div>
+                    <input id="persoon" type="checkbox" value="Persoon">
+                    <label for="persoon">Persoon</label>
+                </div>
+                <div>
+                    <input id="sport" type="checkbox" value="Sport">
+                    <label for="sport">Sport</label>
+                </div>
+                <div>
+                    <input id="gevoelens" type="checkbox" value="Gevoelens">
+                    <label for="gevoelens">Gevoelens</label>
+                </div>
+                <div>
+                    <input id="weer" type="checkbox" value="Weer">
+                    <label for="weer">Weer</label>
+                </div>
+                <div>
+                    <input id="leven" type="checkbox" value="Leven">
+                    <label for="leven">Leven</label>
+                </div>
+            </fieldset>
+            <input type="submit" name="filter" value="filter">
+        </form>
+        <!------------------------ /Filter form ------------------------>
+
+        <!------------------------ Featured ------------------------>
+        <section>
+            <h2>Uitgelicht</h2>
+            <article>
+                <header>
+                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
+				</header>
+                    <section>
+                        <h3>Doof</h3><span>20</span>
+                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
+                    </section>
+                    <footer>
+                        <a href="#">Lees meer</a>
+                    </footer>
+            </article>
+            <article>
+                <header>
+                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
+				</header>
+                    <section>
+                        <h3>Doof</h3><span>20</span>
+                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
+                    </section>
+                    <footer>
+                        <a href="#">Lees meer</a>
+                    </footer>
+            </article>
+            <article>
+                <header>
+                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
+				</header>
+                    <section>
+                        <h3>Doof</h3><span>20</span>
+                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
+                    </section>
+                    <footer>
+                        <a href="#">Lees meer</a>
+                    </footer>
+            </article>
+            <article>
+                <header>
+                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
+				</header>
+                    <section>
+                        <h3>Doof</h3><span>20</span>
+                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
+                    </section>
+                    <footer>
+                        <a href="#">Lees meer</a>
+                    </footer>
+            </article>
+        </section>
+        <!------------------------ /Featured ------------------------>
+
+        <!------------------------ Recommended RET ------------------------>
+        <section>
+            <article>
+                <header>
+                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
+				</header>
+                <section>
+                    <h2>RET’s keuze</h2>
+                    <h3>Doof</h3>
+                    <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
+                    <a href="#">Lees meer</a>
+                </section>
+            </article>
+        </section>
+        <section>
+            <h2>Op zoek naar een verhaal om te lezen?</h2>
+            <button>veras me</button>
+        </section>
+        <!------------------------ /Recommended RET ------------------------>
+        
+        <footer>
+            <p>&copy; RET</p>
+            <img src="assets/img/logo.svg" alt="RET logo">
+		</footer>
+    </main>
+
+    <!------------------------ /Main ------------------------>
+</body>
+
+</html>
