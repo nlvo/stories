@@ -1,0 +1,11 @@
+header {
+    position: relative;
+
+    h1 {
+        position: absolute;
+        color: $pearl;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

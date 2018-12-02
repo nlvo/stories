@@ -1,0 +1,22 @@
+@import 'normalize';
+@import 'buttons';
+@import 'grid';
+@import 'cards';
+@import 'form';
+
+.surprise {
+    background-color: $marine;
+    padding: 24px;
+
+    h2 {
+        color: $pearl;
+
+        &:before {
+            content: '';
+            border-bottom: 2px solid $velvet;
+            display: block;
+            margin: 0 0 24px 0;
+            width: 100px;
+        }
+    }
+}

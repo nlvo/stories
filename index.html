@@ -9,262 +9,420 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">Alle verhalen</a>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <a href="#"><img src="assets/img/logo.svg" alt="RET logo"></a>
-            </li>
-            <li>
-                <form>
-                    <input type="text" name="search">
-                    <input type="submit" name="search-submit" value="zoek">
-                </form>
-            </li>
-        </ul>
+    <nav class="nav nav--bottom">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="#">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
+						  <g fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="1.65">
+						    <path d="M2.49166667,8.02869566 L2.49166667,21.1701608 L7.58490058,21.1403728 L7.58490058,14.4480618 L8.40990058,14.4480618 L11.5900994,14.4480618 L12.4150994,14.4480618 L12.4150994,21.1403728 L17.5083333,21.1701608 L17.5083333,8.02869566 L10,1.12102899 L2.49166667,8.02869566 Z"/>
+						    <polyline points=".81 9.618 10 1.122 19.2 9.618"/>
+						  </g>
+						</svg>
+
+
+						<span>
+	                    	Home
+	                    </span>
+                	</a>
+                </li>
+                <li>
+                    <a href="#">
+                    	<svg xmlns="http://www.w3.org/2000/svg" width="18" height="22" viewBox="0 0 18 22">
+                            <path fill="#FFF" d="M9,13 C18,13 18,18.1340068 18,22 C18,22 0,22 0,22 C2.36723813e-16,18.1340068 0,13 9,13 Z M16,20 C16,16.1340068 12.8659932,15 9,15 C5.13400675,15 2,16.1340068 2,20 C2,20 16,20 16,20 Z M9,12 C5.6862915,12 3,9.3137085 3,6 C3,2.6862915 5.6862915,0 9,0 C12.3137085,0 15,2.6862915 15,6 C15,9.3137085 12.3137085,12 9,12 Z M9,10 C11.209139,10 13,8.209139 13,6 C13,3.790861 11.209139,2 9,2 C6.790861,2 5,3.790861 5,6 C5,8.209139 6.790861,10 9,10 Z" />
+                        </svg>
+                        <span>
+                    		Profiel
+                    	</span>
+                	</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-
-    <!------------------------ Main ------------------------>
-
+    <nav class="nav nav--search">
+        <div class="container">
+            <ul>
+                <li>
+                    <a class="logo" href="#"><img src="assets/img/logo.svg" alt="RET logo"></a>
+                </li>
+                <li>
+                    <form class="search">
+                        <input type="text" name="search">
+                        <button><img src="assets/icons/search.svg"></button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Main -->
     <main>
-        <header>
+        <!-- <header>
             <h1>99 verhalen</h1>
             <img src="assets/img/header.png" alt="">
-		</header>
-
-		<!------------------------ Filter form ------------------------>
-        <form>
-            <h2>Filter</h2>
-            <fieldset>
-                <div>
-                    <input type="text" name="search">
-                    <input type="submit" name="search-submit" value="zoek">
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Duur</legend>
-                <div>
-                    <input id="korte-verhaal" type="checkbox" value="Korte verhaal">
-                    <label for="korte-verhaal">Korte verhaal</label>
-                </div>
-                <div>
-                    <input id="middelmatig-verhaal" type="checkbox" value="Middelmatig verhaal">
-                    <label for="middelmatig-verhaal">Middelmatig verhaal</label>
-                </div>
-                <div>
-                    <input id="lange-verhaal" type="checkbox" value="Lange verhaal">
-                    <label for="lange-verhaal">Lange verhaal</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Genre</legend>
-                <div>
-                    <input id="liefde" type="checkbox" value="Liefde">
-                    <label for="liefde">Liefde</label>
-                </div>
-                <div>
-                    <input id="gedicht" type="checkbox" value="Gedicht">
-                    <label for="gedicht">Gedicht</label>
-                </div>
-                <div>
-                    <input id="horror" type="checkbox" value="Horror">
-                    <label for="horror">Horror</label>
-                </div>
-                <div>
-                    <input id="vakantie" type="checkbox" value="Vakantie">
-                    <label for="vakantie">Vakantie</label>
-                </div>
-                <div>
-                    <input id="fantasie" type="checkbox" value="Fantasie">
-                    <label for="fantasie">Fantasie</label>
-                </div>
-                <div>
-                    <input id="humor" type="checkbox" value="Humor">
-                    <label for="humor">Humor</label>
-                </div>
-                <div>
-                    <input id="bekende-figuren" type="checkbox" value="Bekende figuren">
-                    <label for="bekende-figuren">Bekende figuren</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Kleur</legend>
-                <div>
-                    <input id="rood" type="checkbox" value="Rood">
-                    <label for="rood">Rood</label>
-                </div>
-                <div>
-                    <input id="oranje" type="checkbox" value="Oranje">
-                    <label for="oranje">Oranje</label>
-                </div>
-                <div>
-                    <input id="geel" type="checkbox" value="Geel">
-                    <label for="geel">Geel</label>
-                </div>
-                <div>
-                    <input id="groen" type="checkbox" value="Groen">
-                    <label for="groen">Groen</label>
-                </div>
-                <div>
-                    <input id="blauw" type="checkbox" value="Blauw">
-                    <label for="blauw">Blauw</label>
-                </div>
-                <div>
-                    <input id="paars" type="checkbox" value="Paars">
-                    <label for="paars">Paars</label>
-                </div>
-                <div>
-                    <input id="roze" type="checkbox" value="Roze">
-                    <label for="roze">Roze</label>
-                </div>
-                <div>
-                    <input id="wit" type="checkbox" value="Wit">
-                    <label for="wit">Wit</label>
-                </div>
-                <div>
-                    <input id="zwart" type="checkbox" value="Zwart">
-                    <label for="zwart">Zwart</label>
-                </div>
-            </fieldset>
-            <fieldset>
-                <legend>Tags</legend>
-                <div>
-                    <input id="rust" type="checkbox" value="Rust">
-                    <label for="rust">Rust</label>
-                </div>
-                <div>
-                    <input id="druk" type="checkbox" value="Druk">
-                    <label for="druk">Druk</label>
-                </div>
-                <div>
-                    <input id="chaotisch" type="checkbox" value="Chaotisch">
-                    <label for="chaotisch">Chaotisch</label>
-                </div>
-                <div>
-                    <input id="vrolijk" type="checkbox" value="Vrolijk">
-                    <label for="vrolijk">Vrolijk</label>
-                </div>
-                <div>
-                    <input id="agressief" type="checkbox" value="Aggresief">
-                    <label for="agressief">Agressief</label>
-                </div>
-                <div>
-                    <input id="verwarrend" type="checkbox" value="Verwarrend">
-                    <label for="verwarrend">Verwarrend</label>
-                </div>
-                <div>
-                    <input id="persoon" type="checkbox" value="Persoon">
-                    <label for="persoon">Persoon</label>
-                </div>
-                <div>
-                    <input id="sport" type="checkbox" value="Sport">
-                    <label for="sport">Sport</label>
-                </div>
-                <div>
-                    <input id="gevoelens" type="checkbox" value="Gevoelens">
-                    <label for="gevoelens">Gevoelens</label>
-                </div>
-                <div>
-                    <input id="weer" type="checkbox" value="Weer">
-                    <label for="weer">Weer</label>
-                </div>
-                <div>
-                    <input id="leven" type="checkbox" value="Leven">
-                    <label for="leven">Leven</label>
-                </div>
-            </fieldset>
-            <input type="submit" name="filter" value="filter">
-        </form>
-        <!------------------------ /Filter form ------------------------>
-
-        <!------------------------ Featured ------------------------>
-        <section>
-            <h2>Uitgelicht</h2>
-            <article>
-                <header>
-                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
-				</header>
-                    <section>
-                        <h3>Doof</h3><span>20</span>
-                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
-                    </section>
-                    <footer>
-                        <a href="#">Lees meer</a>
-                    </footer>
-            </article>
-            <article>
-                <header>
-                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
-				</header>
-                    <section>
-                        <h3>Doof</h3><span>20</span>
-                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
-                    </section>
-                    <footer>
-                        <a href="#">Lees meer</a>
-                    </footer>
-            </article>
-            <article>
-                <header>
-                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
-				</header>
-                    <section>
-                        <h3>Doof</h3><span>20</span>
-                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
-                    </section>
-                    <footer>
-                        <a href="#">Lees meer</a>
-                    </footer>
-            </article>
-            <article>
-                <header>
-                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
-				</header>
-                    <section>
-                        <h3>Doof</h3><span>20</span>
-                        <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
-                    </section>
-                    <footer>
-                        <a href="#">Lees meer</a>
-                    </footer>
-            </article>
-        </section>
-        <!------------------------ /Featured ------------------------>
-
-        <!------------------------ Recommended RET ------------------------>
-        <section>
-            <article>
-                <header>
-                    <img src="assets/img/doof-header.png" alt="vormgeving doof">
-				</header>
-                <section>
-                    <h2>RET’s keuze</h2>
-                    <h3>Doof</h3>
-                    <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk. Ik had het kunnen weten, want halverwege de busreis merkte ik dat de mensen zich niet meer aan ons stoorden. Het gejank zou toen wel gestopt zijn.</p>
-                    <a href="#">Lees meer</a>
+        </header> -->
+        <div class="container">
+            <div class="row row--overview">
+                <!-- Filter form -->
+                <aside>
+                    <form class="filter">
+                        <fieldset>
+                            <legend>
+                                Duur
+                                <svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M8.18995086,4.81633577e-09 C8.94895086,4.81633577e-09 9,-5.81720672e-09 9,4.5158286e-09 L5,5 C5,5 5,5 4,5 L1.77635684e-14,4.5158286e-09 C-9.14521792e-11,-5.81720672e-09 0.128950856,4.81633577e-09 0.886950856,4.81633577e-09 L8.18995086,4.81633577e-09 Z" fill="#6D6E71"></path>
+                                    </g>
+                                </svg>
+                            </legend>
+                            <ul>
+                                <li>
+                                    <input id="korte-verhaal" type="checkbox" value="Korte verhaal">
+                                    <label for="korte-verhaal">Korte verhaal <span>(16)</span></label>
+                                </li>
+                                <li>
+                                    <input id="middelmatig-verhaal" type="checkbox" value="Middelmatig verhaal">
+                                    <label for="middelmatig-verhaal">Middelmatig verhaal <span>(54)</span></label>
+                                </li>
+                                <li>
+                                    <input id="lange-verhaal" type="checkbox" value="Lange verhaal">
+                                    <label for="lange-verhaal">Lange verhaal <span>(29)</span></label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Genre
+                                <svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M8.18995086,4.81633577e-09 C8.94895086,4.81633577e-09 9,-5.81720672e-09 9,4.5158286e-09 L5,5 C5,5 5,5 4,5 L1.77635684e-14,4.5158286e-09 C-9.14521792e-11,-5.81720672e-09 0.128950856,4.81633577e-09 0.886950856,4.81633577e-09 L8.18995086,4.81633577e-09 Z" fill="#6D6E71"></path>
+                                    </g>
+                                </svg>
+                            </legend>
+                            <ul>
+                                <li>
+                                    <input id="liefde" type="checkbox" value="Liefde">
+                                    <label for="liefde">
+                                        Liefde
+                                        <span>(20)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="gedicht" type="checkbox" value="Gedicht">
+                                    <label for="gedicht">
+                                        Gedicht
+                                        <span>(20)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="horror" type="checkbox" value="Horror">
+                                    <label for="horror">
+                                        Horror
+                                        <span>(20)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="vakantie" type="checkbox" value="Vakantie">
+                                    <label for="vakantie">
+                                        Vakantie
+                                        <span>(20)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="fantasie" type="checkbox" value="Fantasie">
+                                    <label for="fantasie">
+                                        Fantasie
+                                        <span>(20)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="humor" type="checkbox" value="Humor">
+                                    <label for="humor">
+                                        Humor
+                                        <span>(20)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="bekende-figuren" type="checkbox" value="Bekende figuren">
+                                    <label for="bekende-figuren">
+                                        Bekende figuren
+                                        <span>(20)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Kleur
+                                <svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M8.18995086,4.81633577e-09 C8.94895086,4.81633577e-09 9,-5.81720672e-09 9,4.5158286e-09 L5,5 C5,5 5,5 4,5 L1.77635684e-14,4.5158286e-09 C-9.14521792e-11,-5.81720672e-09 0.128950856,4.81633577e-09 0.886950856,4.81633577e-09 L8.18995086,4.81633577e-09 Z" fill="#6D6E71"></path>
+                                    </g>
+                                </svg>
+                            </legend>
+                            <ul>
+                                <li>
+                                    <input id="rood" type="checkbox" value="Rood">
+                                    <label for="rood">
+                                        Rood
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="oranje" type="checkbox" value="Oranje">
+                                    <label for="oranje">
+                                        Oranje
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="geel" type="checkbox" value="Geel">
+                                    <label for="geel">
+                                        Geel
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="groen" type="checkbox" value="Groen">
+                                    <label for="groen">
+                                        Groen
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="blauw" type="checkbox" value="Blauw">
+                                    <label for="blauw">
+                                        Blauw
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="paars" type="checkbox" value="Paars">
+                                    <label for="paars">
+                                        Paars
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="roze" type="checkbox" value="Roze">
+                                    <label for="roze">
+                                        Roze
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="wit" type="checkbox" value="Wit">
+                                    <label for="wit">
+                                        Wit
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input id="zwart" type="checkbox" value="Zwart">
+                                    <label for="zwart">
+                                        Zwart
+                                        <span>(15)</span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                        <fieldset>
+                            <legend>
+                                Tags
+                                <svg width="9px" height="5px" viewBox="0 0 9 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" focusable="false">
+                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                        <path d="M8.18995086,4.81633577e-09 C8.94895086,4.81633577e-09 9,-5.81720672e-09 9,4.5158286e-09 L5,5 C5,5 5,5 4,5 L1.77635684e-14,4.5158286e-09 C-9.14521792e-11,-5.81720672e-09 0.128950856,4.81633577e-09 0.886950856,4.81633577e-09 L8.18995086,4.81633577e-09 Z" fill="#6D6E71"></path>
+                                    </g>
+                                </svg>
+                            </legend>
+                            <ul>
+                                <li>
+                                    <input id="rust" type="checkbox" value="Rust">
+                                    <label for="rust">Rust</label>
+                                </li>
+                                <li>
+                                    <input id="druk" type="checkbox" value="Druk">
+                                    <label for="druk">Druk</label>
+                                </li>
+                                <li>
+                                    <input id="chaotisch" type="checkbox" value="Chaotisch">
+                                    <label for="chaotisch">Chaotisch</label>
+                                </li>
+                                <li>
+                                    <input id="vrolijk" type="checkbox" value="Vrolijk">
+                                    <label for="vrolijk">Vrolijk</label>
+                                </li>
+                                <li>
+                                    <input id="agressief" type="checkbox" value="Aggresief">
+                                    <label for="agressief">Agressief</label>
+                                </li>
+                                <li>
+                                    <input id="verwarrend" type="checkbox" value="Verwarrend">
+                                    <label for="verwarrend">Verwarrend</label>
+                                </li>
+                                <li>
+                                    <input id="persoon" type="checkbox" value="Persoon">
+                                    <label for="persoon">Persoon</label>
+                                </li>
+                                <li>
+                                    <input id="sport" type="checkbox" value="Sport">
+                                    <label for="sport">Sport</label>
+                                </li>
+                                <li>
+                                    <input id="gevoelens" type="checkbox" value="Gevoelens">
+                                    <label for="gevoelens">Gevoelens</label>
+                                </li>
+                                <li>
+                                    <input id="weer" type="checkbox" value="Weer">
+                                    <label for="weer">Weer</label>
+                                </li>
+                                <li>
+                                    <input id="leven" type="checkbox" value="Leven">
+                                    <label for="leven">Leven</label>
+                                </li>
+                            </ul>
+                        </fieldset>
+                    </form>
+                </aside>
+                <!-- /Filter form -->
+                <!-- Featured -->
+                <section class="cards">
+                    <div class="row row--filter">
+                        <h1>99 verhalen</h1>
+                        <form class="sorting">
+                            <label for="sorting">Sorteren op:</label>
+                            <select id="sorting">
+                                <option value="populair">Populair</option>
+                                <option value="aanbevolen">Aanbevolen</option>
+                                <option value="alfabetisch">Alfabetisch</option>
+                                <option value="best-beoordeeld">Best beoordeeld</option>
+                                <option value="meest-gelezen">Meest gelezen</option>
+                            </select>
+                        </form>
+                    </div>
+                    <div class="row">
+                        <article class="card">
+                            <header>
+                                <img src="assets/img/doof-header.png" alt="vormgeving doof">
+                            </header>
+                                <section>
+                                    <div class="card__title">
+                                        <h3>Doof</h3>
+                                        <p>
+                                            <span>20</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15">
+                                                <path fill="#009DDB" fill-rule="evenodd" d="M12.7734375,0.625 C14.1536527,0.625 15.2864539,1.0286418 16.171875,1.8359375 C17.0572961,2.6432332 17.5,3.74999297 17.5,5.15625 C17.5,6.58854883 16.9661512,7.95572266 15.8984375,9.2578125 C14.8567656,10.5338605 13.5546953,11.6796824 11.9921875,12.6953125 C11.3671844,13.1119812 10.7812527,13.4570299 10.234375,13.7304688 C9.68749727,14.0039076 9.29687617,14.1796871 9.0625,14.2578125 L8.75,14.375 C8.02082969,14.1927074 6.94011133,13.6328172 5.5078125,12.6953125 C3.94530469,11.6796824 2.64323437,10.5338605 1.6015625,9.2578125 C0.533848828,7.95572266 0,6.58854883 0,5.15625 C0,3.74999297 0.442703906,2.6432332 1.328125,1.8359375 C2.21354609,1.0286418 3.34634727,0.625 4.7265625,0.625 C5.5338582,0.625 6.30859004,0.807289844 7.05078125,1.171875 C7.79297246,1.53646016 8.35937305,2.04426758 8.75,2.6953125 C9.14062695,2.04426758 9.70702754,1.53646016 10.4492188,1.171875 C11.19141,0.807289844 11.9661418,0.625 12.7734375,0.625 Z" />
+                                            </svg>
+                                        </p>
+                                    </div>
+                                    <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk.</p>
+                                    <a href="#">
+                                    Lees meer
+                                    <span>
+                                        <svg focusable="false" width="5px" height="9px" viewBox="0 0 5 9">
+                                            <g transform="translate(2.500000, 4.500000) rotate(-90.000000) translate(-2.500000, -4.500000) translate(-2.000000, 2.000000)" fill="#44C8F5">
+                                                <path d="M8.18995086,4.81632867e-09 C8.94895086,4.81632867e-09 9,-5.81721382e-09 9,4.51582149e-09 L5,5 C5,5 5,5 4,5 L-1.77635684e-14,4.51582149e-09 C-9.14877063e-11,-5.81721382e-09 0.128950856,4.81632867e-09 0.886950856,4.81632867e-09 L8.18995086,4.81632867e-09 Z"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                                </section>
+                        </article>
+                        <article class="card">
+                            <header>
+                                <img src="assets/img/doof-header.png" alt="vormgeving doof">
+                            </header>
+                                <section>
+                                    <div class="card__title">
+                                        <h3>Doof</h3>
+                                        <p>
+                                            <span>20</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15">
+                                                <path fill="#009DDB" fill-rule="evenodd" d="M12.7734375,0.625 C14.1536527,0.625 15.2864539,1.0286418 16.171875,1.8359375 C17.0572961,2.6432332 17.5,3.74999297 17.5,5.15625 C17.5,6.58854883 16.9661512,7.95572266 15.8984375,9.2578125 C14.8567656,10.5338605 13.5546953,11.6796824 11.9921875,12.6953125 C11.3671844,13.1119812 10.7812527,13.4570299 10.234375,13.7304688 C9.68749727,14.0039076 9.29687617,14.1796871 9.0625,14.2578125 L8.75,14.375 C8.02082969,14.1927074 6.94011133,13.6328172 5.5078125,12.6953125 C3.94530469,11.6796824 2.64323437,10.5338605 1.6015625,9.2578125 C0.533848828,7.95572266 0,6.58854883 0,5.15625 C0,3.74999297 0.442703906,2.6432332 1.328125,1.8359375 C2.21354609,1.0286418 3.34634727,0.625 4.7265625,0.625 C5.5338582,0.625 6.30859004,0.807289844 7.05078125,1.171875 C7.79297246,1.53646016 8.35937305,2.04426758 8.75,2.6953125 C9.14062695,2.04426758 9.70702754,1.53646016 10.4492188,1.171875 C11.19141,0.807289844 11.9661418,0.625 12.7734375,0.625 Z" />
+                                            </svg>
+                                        </p>
+                                    </div>
+                                    <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk.</p>
+                                    <a href="#">
+                                    Lees meer
+                                    <span>
+                                        <svg focusable="false" width="5px" height="9px" viewBox="0 0 5 9">
+                                            <g transform="translate(2.500000, 4.500000) rotate(-90.000000) translate(-2.500000, -4.500000) translate(-2.000000, 2.000000)" fill="#44C8F5">
+                                                <path d="M8.18995086,4.81632867e-09 C8.94895086,4.81632867e-09 9,-5.81721382e-09 9,4.51582149e-09 L5,5 C5,5 5,5 4,5 L-1.77635684e-14,4.51582149e-09 C-9.14877063e-11,-5.81721382e-09 0.128950856,4.81632867e-09 0.886950856,4.81632867e-09 L8.18995086,4.81632867e-09 Z"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                                </section>
+                        </article>
+                        <article class="card">
+                            <header>
+                                <img src="assets/img/doof-header.png" alt="vormgeving doof">
+                            </header>
+                                <section>
+                                    <div class="card__title">
+                                        <h3>Doof</h3>
+                                        <p>
+                                            <span>20</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15">
+                                                <path fill="#009DDB" fill-rule="evenodd" d="M12.7734375,0.625 C14.1536527,0.625 15.2864539,1.0286418 16.171875,1.8359375 C17.0572961,2.6432332 17.5,3.74999297 17.5,5.15625 C17.5,6.58854883 16.9661512,7.95572266 15.8984375,9.2578125 C14.8567656,10.5338605 13.5546953,11.6796824 11.9921875,12.6953125 C11.3671844,13.1119812 10.7812527,13.4570299 10.234375,13.7304688 C9.68749727,14.0039076 9.29687617,14.1796871 9.0625,14.2578125 L8.75,14.375 C8.02082969,14.1927074 6.94011133,13.6328172 5.5078125,12.6953125 C3.94530469,11.6796824 2.64323437,10.5338605 1.6015625,9.2578125 C0.533848828,7.95572266 0,6.58854883 0,5.15625 C0,3.74999297 0.442703906,2.6432332 1.328125,1.8359375 C2.21354609,1.0286418 3.34634727,0.625 4.7265625,0.625 C5.5338582,0.625 6.30859004,0.807289844 7.05078125,1.171875 C7.79297246,1.53646016 8.35937305,2.04426758 8.75,2.6953125 C9.14062695,2.04426758 9.70702754,1.53646016 10.4492188,1.171875 C11.19141,0.807289844 11.9661418,0.625 12.7734375,0.625 Z" />
+                                            </svg>
+                                        </p>
+                                    </div>
+                                    <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk.</p>
+                                    <a href="#">
+                                    Lees meer
+                                    <span>
+                                        <svg focusable="false" width="5px" height="9px" viewBox="0 0 5 9">
+                                            <g transform="translate(2.500000, 4.500000) rotate(-90.000000) translate(-2.500000, -4.500000) translate(-2.000000, 2.000000)" fill="#44C8F5">
+                                                <path d="M8.18995086,4.81632867e-09 C8.94895086,4.81632867e-09 9,-5.81721382e-09 9,4.51582149e-09 L5,5 C5,5 5,5 4,5 L-1.77635684e-14,4.51582149e-09 C-9.14877063e-11,-5.81721382e-09 0.128950856,4.81632867e-09 0.886950856,4.81632867e-09 L8.18995086,4.81632867e-09 Z"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                                </section>
+                        </article>
+                        <article class="card">
+                            <header>
+                                <img src="assets/img/doof-header.png" alt="vormgeving doof">
+                            </header>
+                                <section>
+                                    <div class="card__title">
+                                        <h3>Doof</h3>
+                                        <p>
+                                            <span>20</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 18 15">
+                                                <path fill="#009DDB" fill-rule="evenodd" d="M12.7734375,0.625 C14.1536527,0.625 15.2864539,1.0286418 16.171875,1.8359375 C17.0572961,2.6432332 17.5,3.74999297 17.5,5.15625 C17.5,6.58854883 16.9661512,7.95572266 15.8984375,9.2578125 C14.8567656,10.5338605 13.5546953,11.6796824 11.9921875,12.6953125 C11.3671844,13.1119812 10.7812527,13.4570299 10.234375,13.7304688 C9.68749727,14.0039076 9.29687617,14.1796871 9.0625,14.2578125 L8.75,14.375 C8.02082969,14.1927074 6.94011133,13.6328172 5.5078125,12.6953125 C3.94530469,11.6796824 2.64323437,10.5338605 1.6015625,9.2578125 C0.533848828,7.95572266 0,6.58854883 0,5.15625 C0,3.74999297 0.442703906,2.6432332 1.328125,1.8359375 C2.21354609,1.0286418 3.34634727,0.625 4.7265625,0.625 C5.5338582,0.625 6.30859004,0.807289844 7.05078125,1.171875 C7.79297246,1.53646016 8.35937305,2.04426758 8.75,2.6953125 C9.14062695,2.04426758 9.70702754,1.53646016 10.4492188,1.171875 C11.19141,0.807289844 11.9661418,0.625 12.7734375,0.625 Z" />
+                                            </svg>
+                                        </p>
+                                    </div>
+                                    <p>De bus stopt. Mensen stappen uit. Heel voorzichtig kijk ik in de kinderwagen. Mijn zoon slaapt eindelijk.</p>
+                                    <a href="#">
+                                    Lees meer
+                                    <span>
+                                        <svg focusable="false" width="5px" height="9px" viewBox="0 0 5 9">
+                                            <g transform="translate(2.500000, 4.500000) rotate(-90.000000) translate(-2.500000, -4.500000) translate(-2.000000, 2.000000)" fill="#44C8F5">
+                                                <path d="M8.18995086,4.81632867e-09 C8.94895086,4.81632867e-09 9,-5.81721382e-09 9,4.51582149e-09 L5,5 C5,5 5,5 4,5 L-1.77635684e-14,4.51582149e-09 C-9.14877063e-11,-5.81721382e-09 0.128950856,4.81632867e-09 0.886950856,4.81632867e-09 L8.18995086,4.81632867e-09 Z"></path>
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </a>
+                                </section>
+                        </article>
+                    </div>
                 </section>
-            </article>
-        </section>
-        <section>
-            <h2>Op zoek naar een verhaal om te lezen?</h2>
-            <button>veras me</button>
-        </section>
-        <!------------------------ /Recommended RET ------------------------>
-        
+                <!-- /Featured -->
+            </div>
+        </div>
         <footer>
-            <p>&copy; RET</p>
-            <img src="assets/img/logo.svg" alt="RET logo">
-		</footer>
+            <div class="container">
+                <p>&copy; RET</p>
+                <img src="assets/img/logo.svg" alt="RET logo">
+            </div>
+        </footer>
     </main>
-
-    <!------------------------ /Main ------------------------>
+    <!-- /Main -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

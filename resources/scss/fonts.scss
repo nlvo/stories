@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600');
+
+h1, h2, h3, h4, h5, h6 {
+	color: #00477F;
+	font-weight: 400;
+}
+
+h1 {
+	// font-size: 2em; //desktop
+	font-size: 1.625em
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.250em;
+}
+
+h4 {
+	// 18px
+	font-size: 1.125em;
+}
+
+.recommended {
+	h2 {
+		color: $water;
+		// 18px
+		font-size: 1.125em;
+	}
+}

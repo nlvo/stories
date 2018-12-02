@@ -1,0 +1,42 @@
+.btn {
+    border: 0;
+    border-radius: 4px;
+
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 10px 20px;
+    overflow: hidden;
+
+    transition: color .3s cubic-bezier(.39, .575, .565, 1), background .3s cubic-bezier(.39, .575, .565, 1);
+
+    .btn__icon {
+        position: relative;
+        display: inline-block;
+        top: -2px;
+        line-height: 12px;
+        margin-left: 20px;
+        color: #fff;
+        font-size: 12px;
+    }
+
+    &--white {
+        background-color: $pearl;
+        color: $marine;
+    }
+
+	&--grey {
+		background-color: $silver;
+	}
+
+    &--marine {
+        background-color: $marine;
+        color: $pearl;
+        margin-top: 24px;
+        &:hover {
+        	background-color: $baby-blue;
+        	color: $marine;
+        }
+    }
+}
