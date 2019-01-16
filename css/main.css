@@ -1410,6 +1410,10 @@ footer .container img {
     font-style: italic;
 }
 
+.story--second {
+    position: relative;
+}
+
 /* ---------------------------------
 		SENTENCE PARAGRAPH
  -----------------------------------*/
@@ -1456,7 +1460,6 @@ footer .container img {
 
 /* ------------- H2 --------------- */
 .paragraph__sentence p {
-    display: none;
     width: 100%;
 }
 
@@ -1608,6 +1611,7 @@ footer .container img {
 
 .search-type {
     height: 3.75em;
+    display: flex;
 }
 
 .search-type .search-bar {
@@ -1633,7 +1637,7 @@ footer .container img {
     border-radius: 0 0.1875em 0.1875em 0;
     display: inline-block;
     height: 100%;
-    width: 3.75em;
+    width: 7.75em;
 }
 
 .search-type .search-btn img {
@@ -1909,24 +1913,6 @@ footer .container img {
         display: flex;
         flex-direction: column-reverse;
     }
-
-    .story__paragraph--second {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-    }
-
-    .story__paragraph--second h2 {
-        color: #4A4A4A;
-        font-size: 2.25em;
-        font-weight: bold;
-    }
-
-    .story__paragraph--second span {
-        background-color: rgba(0, 255, 220, 0.2);
-        font-style: italic;
-    }
   /* ---------------------------------
 		SENTENCE PARAGRAPH
  -----------------------------------*/
@@ -2120,6 +2106,10 @@ footer .container img {
         flex-direction: column;
         flex: 1 0 0;
         transform: none;
+    }
+
+    .search-type .search-btn {
+        width: 3.75em;
     }
 }
 

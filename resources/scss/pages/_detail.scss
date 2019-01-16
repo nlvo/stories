@@ -36,6 +36,10 @@
     }
 }
 
+.story--second {
+    position: relative;
+}
+
 /* ---------------------------------
 		SENTENCE PARAGRAPH
  -----------------------------------*/
@@ -92,7 +96,7 @@
 /* ------------- H2 --------------- */
 
 .paragraph__sentence p {
-    display: none;
+    // display: none;
     width: 100%;
 }
 
@@ -267,6 +271,7 @@
 
 .search-type {
     height: em(60);
+    display: flex;
 
     .search-bar {
         background-color: $pearl;
@@ -291,7 +296,7 @@
         border-radius: 0 em(3) em(3) 0;
         display: inline-block;
         height: 100%;
-        width: em(60);
+        width: 7.75em;
 
         img {
             display: block;
@@ -602,24 +607,6 @@
         flex-direction: column-reverse;
     }
 
-    .story__paragraph--second {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
-
-        h2 {
-            color: $stone;
-            font-size: em(36);
-            font-weight: bold;
-        }
-
-        span {
-            background-color: rgba(0, 255, 220, 0.2);
-            font-style: italic;
-        }
-    }
-
     /* ---------------------------------
 		SENTENCE PARAGRAPH
  -----------------------------------*/
@@ -826,6 +813,12 @@
         flex-direction: column;
         flex: 1 0 0;
         transform: none;
+    }
+
+    .search-type {
+        .search-btn {
+            width: em(60);
+        }
     }
 }
 
