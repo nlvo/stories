@@ -187,11 +187,31 @@
 }
 
 .comments {
+    form {
+        margin: 15px 0;
+    }
+
+    textarea {
+    	margin-top: em(15);
+        width: 100%;
+        height: em(50);
+    }
+
     .comments__profile {
         border-radius: em(50);
         height: em(50);
         width: em(50);
     }
+
+    button {
+        background-color: $marine;
+        color: $pearl;
+        border: none;
+        padding: em(12) em(15);
+        margin: em(24) 0;
+        border-radius: em(3);
+    }
+
 }
 
 @keyframes hideshow {
