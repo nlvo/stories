@@ -1,22 +1,13 @@
 @import 'normalize';
 @import 'buttons';
-@import 'grid';
 @import 'cards';
 @import 'form';
 
-.surprise {
+.recommended {
     background-color: $marine;
-    padding: 24px;
-
+    padding: em(48) 0;
+    position: relative;
     h2 {
         color: $pearl;
-
-        &:before {
-            content: '';
-            border-bottom: 2px solid $velvet;
-            display: block;
-            margin: 0 0 24px 0;
-            width: 100px;
-        }
     }
 }

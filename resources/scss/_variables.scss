@@ -2,10 +2,20 @@ $velvet:	#ED1A2D;
 $marine:	#00477F;
 $water:		#009DDB;
 $blue:		#13679c;
+$aqua:		#44c8f5;
 $baby-blue: #D4EFFC;
 $chestnut:	#3E3739;
+$stone:		#4A4A4A;
 $concrete:	#6D6E71;
+$metal:		#D9D9D9;
 $silver:	#EBEBEC;
+$wire:		#e2e2e3;
 $snow:		#F5F5F6;
 $pearl: 	#FFFFFF;
 $coal:		#231F20;
+
+$browser-context: 16; // Default
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}

@@ -3,9 +3,7 @@ var gulp = require('gulp');
 // Require the gulp-sass plugin
 var sass = require('gulp-sass');
 
-var concat = require('gulp-concat');
-
-var minify = require('gulp-minify');
+var cssbeautify = require('gulp-cssbeautify');
 
 var browserSync = require('browser-sync').create();
 
@@ -14,7 +12,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('sass', function() {
     return gulp.src('resources/scss/main.scss')
         .pipe(sass()) //convert
-        .pipe(concat('style.css')) //minify
+        .pipe(cssbeautify())
         .pipe(gulp.dest('css')) //destination
 		.pipe(browserSync.reload({ stream: true}));
 });

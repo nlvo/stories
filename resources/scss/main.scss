@@ -1,10 +1,5 @@
 @import 'variables';
 
-// Partials 
-@import 'partials/base';
-
-@import 'layout/base';
-
 @import "fonts";
 
 body {
@@ -12,11 +7,95 @@ body {
     font-family: 'Source Sans Pro';
     font-size: 16px;
     margin: 0;
+
+    &.active {
+        .filter {
+            // display: none;
+            background-color: $pearl;
+            position: fixed;
+            width: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            top: 0;
+            bottom: 50px;
+            overflow-y: scroll;
+            height: 100%;
+            transform: translateX(0);
+            // animation: slide-right 2s;
+            animation: slide-left 1s;
+
+            fieldset {
+                &:first-child {
+                    background-color: $chestnut;
+                    box-sizing: border-box;
+                    color: $pearl;
+                    padding: em(15);
+                    position: sticky;
+                    top: 0;
+                    width: 100%;
+                    z-index: 1;
+                    legend {
+                        padding: 0;
+                        padding-left: em(15);
+                    }
+                    .reset {
+                        color: $pearl;
+                        float: right;
+                    }
+                }
+
+                &:nth-child(4) {
+                    ul {
+                        display: flex;
+                    }
+                }
+            }
+
+            .result {
+                background-color: $marine;
+                padding: em(15) em(24);
+                bottom: 0;
+                color: $pearl;
+                position: sticky;
+            }
+
+            // &.active {
+            //     transform: translateX(0);
+            //     animation: slide-left 1s;
+
+            //     fieldset:first-child {
+            //         position: fixed;
+            //         top: 0;
+            //         width: 100%;
+            //         z-index: 1;
+            //     }
+
+            //     .result {
+            //         background-color: $marine;
+            //         padding: 15px 24px;
+            //         bottom: 0;
+            //         color: $pearl;
+            //         position: fixed;
+            //     }
+            // }
+
+            // &--active {
+            //     position: fixed;
+            //     right: 0;
+            //     top: 0;
+            //     height: 100%;
+            //     z-index: 99;
+            //     width: 80%;
+            // }
+        }
+    }
 }
 
 ul {
     padding: 0;
     margin: 0;
+
     li {
         list-style-type: none;
     }
@@ -25,7 +104,7 @@ ul {
 a {
     text-decoration: none;
     color: $blue;
-    padding: 24px 0;
+    padding: em(24) 0;
     line-height: 1.7;
 }
 
@@ -33,6 +112,17 @@ img {
     width: 100%;
 }
 
-p {
-	color: $concrete;
+button img {
+    width: auto;
 }
+
+p {
+    color: $concrete;
+}
+
+// Partials 
+@import 'partials/base';
+
+@import 'layout/base';
+
+@import 'pages/base';

@@ -1,89 +1,180 @@
+/* -------------------------
+ *         NAVBAR
+ -------------------------- */
+
 .nav {
-    background-color: $pearl;
-
-    .logo {
-        padding: 0;
-
-        img {
-            height: 32px;
-            margin: 12px auto 7px;
-            vertical-align: middle;
-            width: auto;
-        }
-    }
+    background-color: $chestnut;
+    box-shadow: 0 1px 20px 0 rgba(35, 31, 32, .1);
 
     ul {
         display: flex;
-        justify-content: space-around;
-        margin: 0;
+        justify-content: space-between;
+        position: relative;
 
         li {
-            padding: 12px;
+            padding: em(12);
+
+            span {
+                display: none;
+            }
+
+            &:last-child {
+                .bookmarklist {
+                    display: inline-block;
+                }
+            }
+
+            &:hover {
+                a {
+                    color: $water;
+                }
+            }
+
+            &.active {
+                background-color: $coal;
+
+                a {
+                    color: $blue;
+
+                }
+
+            }
+
+            a {
+                color: $pearl;
+
+                span {
+                    position: relative;
+
+                    &:after {
+                        border-radius: em(8);
+                        content: '';
+                        position: absolute;
+                        left: em(4);
+                        top: em(-2);
+                        background-color: $aqua;
+                        height: em(8);
+                        width: em(8);
+                        opacity: 0;
+                        transition: all ease 1s;
+                    }
+
+                    &.active {
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+                }
+
+                img {
+                    width: auto;
+
+                }
+            }
         }
     }
 
     form {
         display: flex;
+
+        input {
+            visibility: hidden;
+        }
     }
 
-    &--bottom {
-        background-color: $chestnut;
-        bottom: 0;
+    &--search {
         position: fixed;
+        bottom: 0;
         width: 100%;
         z-index: 1;
 
-        a {
-            color: $pearl;
-            padding: 0;
-            line-height: 15px;
-
-            svg {
-                margin: 0 auto;
-            }
-
-            span {
-                display: none;
-            }
+        &:after {
+            content: '';
+            background: $velvet;
+            height: 0;
+            width: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            transition: width .5s cubic-bezier(.215, .61, .355, 1);
         }
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: em(768)) {
     .nav {
         align-items: center;
 
+        ul {
+            justify-content: center;
+
+            li {
+                img {
+                    display: none;
+                }
+
+                span {
+                    display: inline-block;
+                }
+
+                &:last-child {
+                    img {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            img {
+                margin-right: em(5);
+
+            }
+        }
+
         &--search {
+            position: relative;
+
             ul {
                 li {
-                    padding: 0;
+                    &:last-child {
+                        position: absolute;
+                        right: 0;
+                    }
                 }
             }
         }
 
-        &--bottom {
-            top: 0;
-            bottom: auto;
-            position: relative;
-        }
-
         .search {
+            z-index: 1;
+
             input {
-                height: 50px;
-                line-height: 50px;
+                height: em(50);
+                line-height: em(50);
                 padding-top: 0;
                 padding-bottom: 0;
                 border: none;
                 border-radius: 0;
                 background: $pearl;
-                width: 217px;
+                width: em(217);
             }
 
             button {
                 border-radius: 0;
-                width: 58px;
-                height: 50px;
+                width: em(58);
+                height: em(50);
             }
         }
     }
+}
+
+@keyframes showhide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
 }

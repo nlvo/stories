@@ -1,15 +1,25 @@
+/* -------------------------
+ *          FOOTER
+ -------------------------- */
 footer {
     background-color: $pearl;
-    border-top: 2px solid $velvet;
-	margin-bottom: 50px;
+    border-top: em(2) solid $velvet;
+    display: none;
+
     .container {
         display: flex;
         justify-content: space-between;
-		align-items: center;
+        align-items: center;
 
         img {
-            height: 33px;
+            height: em(33);
             width: auto;
         }
+    }
+}
+
+@media (min-width: em(576)) {
+    footer {
+        display: block;
     }
 }

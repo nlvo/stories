@@ -1,5 +1,188 @@
+/* -------------------------
+ *          HEADER
+ -------------------------- */
 header {
     position: relative;
+    z-index: 1;
+    &.story-header {
+        position: absolute;
+        z-index: 99;
+        width: 100%;
+    }
+    .container {
+        position: relative;
+
+        &:first-child {
+            // background-color: $pearl;
+        }
+    }
+
+    .search-bg {
+        position: relative;
+        z-index: 1;
+        background-color: $pearl;
+
+        &:after {
+            content: '';
+            background: $velvet;
+            height: 0;
+            width: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            transition: width .5s cubic-bezier(.215, .61, .355, 1);
+        }
+
+        &.active {
+
+            // background-color: $velvet;
+            &:after {
+                height: 100%;
+                width: 100%;
+            }
+
+            .logo {
+                display: none;
+                opacity: 0;
+                animation: showhide .3s;
+            }
+
+            input {
+                background: transparent;
+                border: 0;
+                border-bottom: 2px solid $pearl;
+                color: $pearl;
+                opacity: 1;
+                padding-bottom: em(8);
+                visibility: visible;
+                width: 100%;
+                transition: width .5s cubic-bezier(.215, .61, .355, 1);
+
+                &::placeholder {
+                    color: $pearl;
+                }
+            }
+
+            li {
+                &:nth-child(2) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            margin: 0;
+            position: relative;
+            z-index: 1;
+            height: em(50);
+            width: 100%;
+
+            .logo {
+                padding: 0;
+
+                img {
+                    height: 32px;
+                    margin: 12px auto 7px;
+                    vertical-align: middle;
+                    width: auto;
+                }
+            }
+
+            &:after {
+                content: '';
+                background: $velvet;
+                height: 0;
+                width: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                position: absolute;
+                z-index: -1;
+                transition: width .5s cubic-bezier(.215, .61, .355, 1);
+            }
+
+            &.active {
+
+                // background-color: $velvet;
+                &:after {
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .logo {
+                    display: none;
+                    opacity: 0;
+                    animation: showhide .3s;
+                }
+
+                input {
+                    background: transparent;
+                    border: 0;
+                    border-bottom: 2px solid $pearl;
+                    visibility: visible;
+                    width: 100%;
+                }
+
+                li {
+                    &:nth-child(2) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .search {
+                display: flex;
+                align-items: center;
+                margin-left: auto;
+                width: 100%;
+                justify-content: flex-end;
+
+                input {
+                    opacity: 0;
+                }
+            }
+
+            button {
+                background-color: $velvet;
+                border: 0;
+                border-radius: 40px;
+                height: 40px;
+                width: 40px;
+
+                &:focus {
+                    outline: none;
+                }
+
+                img {
+                    display: block;
+                    height: 16px;
+                    width: 16px;
+                    margin: 0 auto;
+                }
+            }
+
+        }
+    }
+
+
+
+    .logo {
+        padding: 0;
+        // margin-right: auto;
+
+        img {
+            height: em(32);
+            margin: em(12) auto em(7);
+            vertical-align: middle;
+            width: auto;
+        }
+    }
 
     h1 {
         position: absolute;
@@ -7,5 +190,91 @@ header {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    #filter {
+        background-color: $pearl;
+        border: none;
+        border-radius: em(3);
+        box-shadow: 0 em(10) em(30) 0 rgba(35, 31, 32, .1);
+        font-size: 1em;
+        padding: em(10) em(20);
+        margin-top: em(-30);
+        margin-bottom: em(24);
+        width: 100%;
+    }
+}
+
+@media (min-width: em(768)) {
+    header {
+        .container {
+            &:first-child {
+                padding: 0;
+            }
+        }
+
+        #filter {
+            display: none;
+        }
+
+        .logo {
+            justify-content: flex-start;
+        }
+
+        .search-bg {
+            &.active {
+                .logo {
+                    display: block;
+                    opacity: 1;
+                    animation: none;
+                }
+            }
+
+            .search-container {
+                position: absolute;
+                top: em(25);
+                align-items: center;
+
+                // width: 100%;
+                .search {
+                    input {
+                        background-color: $pearl;
+                        border: 0;
+                        border-radius: em(3) 0 0 em(3);
+                        // display: inline-block;
+                        height: em(50);
+                        opacity: 1;
+                        padding: 0 em(12);
+                        width: em(400);
+
+                        &::placeholder {
+                            color: $concrete;
+                        }
+                    }
+
+                }
+
+                button {
+                    // display: inline-block;
+                    background-color: $velvet;
+                    border: 0;
+                    border-radius: 0 em(3) em(3) 0;
+                    float: right;
+                    // border-radius: em(40);
+                    height: em(50);
+                    line-height: em(50);
+                    padding: 0 em(10);
+                    vertical-align: bottom;
+                    width: em(50);
+
+                    img {
+                        display: block;
+                        height: em(16);
+                        width: em(16);
+                        margin: 0 auto;
+                    }
+                }
+            }
+        }
     }
 }

@@ -1,12 +1,16 @@
+/* -------------------------
+ *         BUTTONS
+ -------------------------- */ 
+
 .btn {
     border: 0;
-    border-radius: 4px;
+    border-radius: em(4);
 
     cursor: pointer;
-    font-size: 16px;
+    font-size: em(16);
     font-weight: 600;
-    line-height: 30px;
-    padding: 10px 20px;
+    line-height: em(30);
+    padding: em(10) em(20);
     overflow: hidden;
 
     transition: color .3s cubic-bezier(.39, .575, .565, 1), background .3s cubic-bezier(.39, .575, .565, 1);
@@ -14,11 +18,11 @@
     .btn__icon {
         position: relative;
         display: inline-block;
-        top: -2px;
-        line-height: 12px;
-        margin-left: 20px;
+        top: -em(2);
+        line-height: em(12);
+        margin-left: em(20);
         color: #fff;
-        font-size: 12px;
+        font-size: em(12);
     }
 
     &--white {
@@ -33,7 +37,7 @@
     &--marine {
         background-color: $marine;
         color: $pearl;
-        margin-top: 24px;
+        margin-top: em(24);
         &:hover {
         	background-color: $baby-blue;
         	color: $marine;

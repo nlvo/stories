@@ -1,3 +1,6 @@
+/* -------------------------
+ *         FORMS
+ -------------------------- */
 form {
     select {
         border: none;
@@ -12,26 +15,170 @@ form {
         border-top: 1px solid $snow;
         padding: 0;
         position: relative;
-
-        &:valid {}
+        margin: 0;
 
         input[type='text'] {
             padding: 15px;
         }
 
         legend {
-            padding: 12px;
+            padding: 15px;
             float: left;
             box-sizing: border-box;
 
-            &~ul {
-                display: none;
+            width: 100%;
+            position: relative;
+
+        }
+    }
+
+    // pseudo element :valid
+    // sibling, adjacent
+}
+
+
+.filter {
+    background-color: $pearl;
+    position: fixed;
+    right: 0;
+    transform: translateX(100%);
+
+    fieldset {
+        background-color: $pearl;
+        border: 0;
+        border-top: 1px solid $snow;
+        padding: 0;
+        position: relative;
+        margin: 0;
+
+        &:first-child {
+            border: none;
+
+            button,
+            legend {
+                width: auto;
+                float: left;
+
+            }
+        }
+
+        &:nth-child(4) {
+            ul {
+                flex-wrap: wrap;
+                padding-top: em(0);
+
+                // padding-bottom: 0;
+                li {
+                    padding: 0 em(10) em(15) 0;
+
+                }
+
+                input[type='checkbox'] {
+                    &:checked+label {
+                        background-color: $aqua;
+                    }
+
+                    &:checked+label::after {
+                        content: none;
+                    }
+                }
+
+                label {
+                    background-color: $baby-blue;
+                    border-radius: em(3);
+                    color: $marine;
+                    padding: em(5) em(12);
+
+                    &:before {
+                        content: none;
+                    }
+
+                    span {
+                        color: $marine;
+                        padding-left: em(10);
+                    }
+                }
+            }
+        }
+
+        input[type='text'] {
+            padding: em(15);
+        }
+
+        legend {
+            padding: em(24);
+            float: left;
+            box-sizing: border-box;
+
+            width: 100%;
+            position: relative;
+        }
+
+        ul {
+            padding: em(24);
+
+            li {
+                padding: em(17) 0;
+                position: relative;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+
+            input[type='checkbox'] {
+                // height: 20px;
+                // width: 20px;
+                opacity: 0;
+                position: absolute;
+
+                &+label {
+                    &:after {
+                        content: none;
+                    }
+                }
+
+                &:checked+label::after {
+                    content: url('/assets/icons/check.svg');
+                }
+            }
+
+            label {
+                position: relative;
+                padding: 0 0 0 em(32);
+                display: flex;
+                justify-content: space-between;
+
+                &:before,
+                &:after {
+                    display: inline-block;
+                    position: absolute;
+                    height: em(15);
+                    width: em(15);
+                }
+
+                &:before {
+                    border: 2px solid $concrete;
+                    border-radius: em(4);
+                    content: '';
+                    left: 0;
+                }
+
+                &:after {
+                    top: em(-2);
+                    left: em(4);
+                }
+
+                span {
+                    color: $concrete;
+                }
+
             }
         }
 
         svg {
             position: absolute;
-            right: 24px;
+            right: em(24);
             top: 50%;
             transform: translate(-50%, -50%);
 
@@ -40,7 +187,7 @@ form {
             }
 
             img {
-                width: 5px;
+                width: em(5);
             }
         }
     }
@@ -53,80 +200,139 @@ form {
     // sibling, adjacent
 }
 
-.filter {
-    margin-top: 15px;
-}
-
-.registration {
-    fieldset {
+@media (min-width: em(768)) {
+    .filter {
         background-color: transparent;
+        border-radius: em(3);
+        display: flex;
+        margin-top: em(-30);
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+        transform: none;
 
-        input {
-            display: block;
-            width: 100%;
-            padding: 18px 12px;
-            font-family: "Source Sans Pro", sans-serif;
-            font-size: 16px;
-            color: #231f20;
-            border: 2px #ebebec solid;
-            border-radius: 4px;
-            background: #fff;
-            transition: border-color .3s cubic-bezier(.39, .575, .565, 1), color .3s cubic-bezier(.39, .575, .565, 1);
+        fieldset {
+            background-color: transparent;
+            border: none;
+            flex: 1 1 0;
+
+            &:first-child {
+                display: none;
+            }
+
+            &:nth-child(4) {
+                legend {
+                    &.active {
+                        background-color: $pearl;
+
+                        &+ul {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+
+            // &:nth-child(2) {
+            //     legend {
+            //         border-top-left-radius: em(3);
+            //         border-bottom-left-radius: em(3);
+            //     }
+            // }
+
+            // &:nth-child(4) {
+            //     legend {
+            //         border-top-right-radius: em(3);
+            //         border-bottom-right-radius: em(3);
+            //     }
+            // }
+        }
+
+        legend {
+            background-color: $pearl;
+
+            &~ul {
+                display: none;
+            }
+
+            &.active {
+                &~ul {
+                    background-color: $pearl;
+                    box-shadow: 0px em(20) em(20) 0 rgba(35, 31, 32, .1);
+                    display: block;
+                    z-index: 1;
+                    position: absolute;
+                    top: em(68);
+                    right: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        button {
+            display: none;
         }
     }
 }
 
-@media (min-width: 768px) {
-    form {
+@media (min-width: em(992)) {
+    .filter {
+        background-color: transparent;
+        max-width: em(960);
 
         fieldset {
-            margin: 15px 0;
+            background-color: $pearl;
+        }
+    }
+}
 
-            legend {
-                width: 100%;
-                position: relative;
+@media (min-width: em(1200)) {
+    .filter {
+        display: block;
+        margin-top: auto;
 
-                svg {
-                    transform: rotate(180deg);
+        fieldset {
+            margin-bottom: em(20);
+            border: em(2) solid $silver;
 
-                    path {
-                        fill: $velvet;
-                    }
-                }
+            select {
+                background: none;
+                border: none;
+            }
 
-                &~ul {
-                    display: block;
-
-                    li {
-                        padding: 15px;
+            &:nth-child(4) {
+                legend {
+                    &+ul {
+                        display: flex;
                     }
                 }
             }
         }
 
-    }
+        legend {
+            &~ul {
+                display: block;
+            }
 
-}
-
-.search {
-    button {
-        background-color: $velvet;
-        border: 0;
-        border-radius: 40px;
-        height: 40px;
-        width: 40px;
-
-        img {
-            display: block;
-            height: 16px;
-            width: 16px;
-            margin: 0 auto;
         }
     }
 }
 
-.sorting {
-    label {
-        padding-right: 12px;
+@keyframes slide-right {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }

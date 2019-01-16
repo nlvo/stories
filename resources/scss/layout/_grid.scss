@@ -1,0 +1,103 @@
+/* -------------------------
+ *          GRID
+ -------------------------- */
+
+.container {
+    padding: 0 em(15);
+    margin-left: auto;
+    margin-right: auto;
+
+    .container {
+        padding: 0;
+    }
+}
+
+@media (min-width: em(576)) {
+    .container {
+        max-width: em(540);
+    }
+}
+
+@media (min-width: em(768)) {
+    .container {
+        max-width: em(720);
+    }
+
+    .row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: em(24);
+
+        &--overview {
+            grid-template-columns: 1fr;
+            z-index: 1;
+            position: relative;
+
+            .container {
+                padding: 0;
+            }
+        }
+
+        &--recommended {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &--register {
+            height: 100vh;
+
+        }
+    }
+}
+
+@media (min-width: em(992)) {
+    .container {
+        max-width: em(960);
+    }
+
+    .row {
+        grid-template-columns: repeat(3, 1fr);
+
+        &--overview {
+            grid-template-columns: 1fr;
+
+            .container {
+                padding: 0;
+            }
+        }
+
+        &--recommended {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &--register {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media (min-width: em(1200)) {
+    .container {
+        height: auto;
+        max-width: em(1140);
+    }
+
+    .row {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        &--overview {
+            grid-template-columns: 1fr 3fr;
+            margin-top: em(-130);
+        }
+
+        &--recommended {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+
+        &--register {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+}

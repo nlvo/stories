@@ -1,0 +1,130 @@
+.registration {
+    margin: em(42) 0 em(92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+        &:after {
+            content: '';
+            border-bottom: em(2) solid $velvet;
+            display: block;
+            margin: em(6) 0 0;
+            width: em(112);
+        }
+    }
+
+    fieldset {
+        background-color: transparent;
+        border-bottom: em(1) solid $wire;
+        padding-bottom: em(24);
+
+        legend {
+            display: none;
+        }
+
+        li {
+            position: relative;
+
+            label {
+                color: $concrete;
+                display: block;
+                margin: em(6) 0;
+            }
+
+            input {
+                background-color: $pearl;
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                padding: em(18) em(12);
+                font-family: "Source Sans Pro", sans-serif;
+                font-size: em(16);
+                color: #231f20;
+                border: em(2) #ebebec solid;
+                border-radius: em(4);
+                transition: border-color .3s cubic-bezier(.39, .575, .565, 1), color .3s cubic-bezier(.39, .575, .565, 1);
+
+                &:valid {
+                    background: url('/assets/icons/input-check.svg');
+                    background-size: 20px;
+                    background-repeat: no-repeat;
+                    background-position: right em(15) bottom em(15);
+                    background-color: $pearl;
+                }
+
+                &:invalid:not(:focus):not(:placeholder-shown) {
+                    background: url('/assets/icons/error.svg');
+                    background-size: 20px;
+                    background-repeat: no-repeat;
+                    background-position: right em(15) bottom em(15);
+                    background-color: $pearl;
+
+                    &~.requirements {
+                        opacity: 1;
+                    }
+                }
+
+                &:invalid:focus:not(:placeholder-shown) {
+
+                    // Show the more robust requirement instructions below.
+                    &~.requirements {}
+                }
+            }
+
+            .requirements {
+                position: absolute;
+                bottom: em(50);
+                right: 0;
+                opacity: 0;
+                background: #d4effc;
+                color: #6d6e71;
+                font-size: 16px;
+                width: 260px;
+                padding: 6px 12px;
+                border-radius: 3px;
+                text-align: center;
+                line-height: 25px;
+                transition: opacity .3s cubic-bezier(.39, .575, .565, 1), right 0s .3s;
+
+                p {
+                    margin: 0;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 100%;
+                    right: 21px;
+                    width: 0;
+                    height: 0;
+                    content: "";
+                    border-bottom: 0 !important;
+                    border-top: 6px #d4effc solid;
+                    border-left: 6px transparent solid;
+                    border-right: 6px transparent solid;
+                }
+            }
+        }
+    }
+
+    button {
+
+        img {
+            margin-left: em(20);
+        }
+    }
+}
+
+@media (min-width: em(768)) {
+    .registration {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        margin: em(42) 0;
+    }
+}
+
+@media (min-width: em(992)) {
+    .registration {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+}
